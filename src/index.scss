@@ -5,3 +5,15 @@ $my-color: #fd680e;
 .my-style {
   color: $my-color;
 }
+
+.mars {
+  background-size: 600px 800px;
+}
+
+.rover {
+  display: flex;
+  z-index: 1;
+  position: absolute;
+  left: 704px;
+  top: 50%;
+}

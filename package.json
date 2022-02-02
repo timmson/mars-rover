@@ -1,7 +1,7 @@
 {
-  "name": "react-bootstrap-template",
-  "version": "1.2.0",
-  "description": "Template for React and Bootstrap application",
+  "name": "mars-rover",
+  "version": "1.0.0",
+  "description": "Mars Rover Kata",
   "private": true,
   "scripts": {
     "lint": "npx eslint ./src ./test --fix",
@@ -9,7 +9,8 @@
     "coverage": "npx jest --collectCoverage",
     "dev": "npx webpack --mode development",
     "watch": "npx webpack --mode development --watch",
-    "prod": "npx webpack --mode production"
+    "prod": "npx webpack --mode production",
+    "start": "npx webpack serve --mode development"
   },
   "repository": {
     "type": "git",
@@ -43,6 +44,7 @@
     "react-test-renderer": "17.0.2",
     "sass-loader": "^12.4.0",
     "webpack": "^5.65.0",
-    "webpack-cli": "^4.9.1"
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "4.7.4"
   }
 }

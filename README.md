@@ -1,5 +1,5 @@
-# react-bootstrap-template
-Template for Vue.js and Bootstrap application
+# Mars Rover Kata
+Mars Rover Kata
 
 - React 17
 - Bootstrap 5
@@ -7,10 +7,13 @@ Template for Vue.js and Bootstrap application
 - Webpack
 - SASS/SCSS support
 
+### Requirements 
+- [Mars Rover Kata at kata-log.rocks](https://kata-log.rocks/mars-rover-kata)
+
 ### Clone
 ```sh
-git clone https://github.com/timmson/react-bootstrap-template.git
-cd react-bootstrap-template
+git clone https://github.com/timmson/mars-rover.git
+cd mars-rover
 ```
 
 ### Install dependencies
@@ -20,15 +23,10 @@ npm i
 
 ### Run webpack
 
-#### Development mode
 ```sh
-npm run dev
-```
-#### Production mode
-```sh
-npm run prod
+npm start
 ```
 
-### Open index.html in browser
+### Open localhost:3000 in browser
 
 Enjoy!
