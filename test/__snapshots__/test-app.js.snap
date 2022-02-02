@@ -37,7 +37,7 @@ Array [
     style={
       Object {
         "left": "-64px",
-        "top": "296px",
+        "top": "306px",
         "transform": "rotate(90deg) scaleX(-1)",
       }
     }
