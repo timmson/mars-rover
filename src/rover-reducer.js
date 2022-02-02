@@ -1,7 +1,6 @@
 import {FORWARD, BACKWARD, TURN_RIGHT, TURN_LEFT} from "./actions"
 import {NORTH, WEST} from "./directions"
-
-const speed = 5
+import {SPEED} from "./settings"
 
 export default function RoverReducer(state, action) {
 
@@ -29,19 +28,19 @@ export default function RoverReducer(state, action) {
 		let dy = 0
 		switch (state.direction) {
 		case 0: {
-			dy = speed
+			dy = SPEED
 			break
 		}
 		case 1: {
-			dx = speed
+			dx = SPEED
 			break
 		}
 		case 2: {
-			dy = -speed
+			dy = -SPEED
 			break
 		}
 		case 3: {
-			dx = -speed
+			dx = -SPEED
 			break
 		}
 		}
@@ -57,19 +56,19 @@ export default function RoverReducer(state, action) {
 		let dy = 0
 		switch (state.direction) {
 		case 0: {
-			dy = -speed
+			dy = -SPEED
 			break
 		}
 		case 1: {
-			dx = -speed
+			dx = -SPEED
 			break
 		}
 		case 2: {
-			dy = speed
+			dy = SPEED
 			break
 		}
 		case 3: {
-			dx = speed
+			dx = SPEED
 			break
 		}
 		}
@@ -81,7 +80,6 @@ export default function RoverReducer(state, action) {
 	}
 
 	default:
-		console.log(action)
 		return state
 	}
 }

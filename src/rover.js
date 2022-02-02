@@ -2,7 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import {EAST} from "./directions"
 
-
 export default function Rover(props) {
 	const style = {
 		transform: `rotate(${90 * props.position.direction}deg) scaleX(${props.position.direction === EAST ? -1 : 1})`,
@@ -12,7 +11,7 @@ export default function Rover(props) {
 
 	return (
 		<div className="rover" style={style}>
-			<img src="rover.png" alt="rover"/>
+			<img src="img/rover.png" alt="rover"/>
 		</div>
 	)
 }

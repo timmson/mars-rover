@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should render 1`] = `
+Array [
+  <nav
+    className="navbar navbar-expand-lg navbar-light bg-light container mb-5"
+  >
+    <div
+      className="row w-50"
+    >
+      <div
+        className="col-3 text-center"
+      >
+        Control: 
+        <img
+          alt="wasd"
+          src="img/wasd.png"
+        />
+      </div>
+      <div
+        className="col-9 text-center"
+      >
+        <p>
+          Tracking: 
+          1
+          , [
+          0
+          ,
+          0
+          ]
+        </p>
+      </div>
+    </div>
+  </nav>,
+  <div
+    className="rover"
+    style={
+      Object {
+        "left": "-64px",
+        "top": "296px",
+        "transform": "rotate(90deg) scaleX(-1)",
+      }
+    }
+  >
+    <img
+      alt="rover"
+      src="img/rover.png"
+    />
+  </div>,
+  <div
+    className="container mars"
+    style={
+      Object {
+        "background": "url(img/bg.png)",
+      }
+    }
+  >
+    <div
+      className="row"
+      style={
+        Object {
+          "height": "300px",
+        }
+      }
+    >
+      <div
+        className="col-6 border border-1 border-dark text-start align-text-bottom"
+      />
+      <div
+        className="col-6 border border-1 border-dark text-start align-text-top"
+      />
+    </div>
+    <div
+      className="row"
+      style={
+        Object {
+          "height": "300px",
+        }
+      }
+    >
+      <div
+        className="col-6 border border-1 border-dark text-end align-text-bottom"
+      />
+      <div
+        className="col-6 border border-1 border-dark text-end align-text-top"
+      />
+    </div>
+  </div>,
+]
+`;

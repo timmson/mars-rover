@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rover should render at (0,0) and have direction to east 1`] = `
+<div
+  className="rover"
+  style={
+    Object {
+      "left": "0px",
+      "top": "0px",
+      "transform": "rotate(90deg) scaleX(-1)",
+    }
+  }
+>
+  <img
+    alt="rover"
+    src="img/rover.png"
+  />
+</div>
+`;
