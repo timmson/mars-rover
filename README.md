@@ -42,7 +42,7 @@ export default function RoverReducer(oldState, action) {
 }
 ````
 
-You should start write your tests in ```test/test-rover-reducer``` with TDD:
+You should start to write your tests in ```test/test-rover-reducer``` with TDD:
 
 1. When action is TURN_RIGHT then rover should change direction clockwise
 1. When action is TURN_LEFT then rover should change direction counterclockwise
