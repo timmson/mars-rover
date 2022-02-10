@@ -19,6 +19,10 @@ npm i
 #### Requirements
 - [Mars Rover Kata at kata-log.rocks](https://kata-log.rocks/mars-rover-kata)
 
+#### TDD Cycle
+
+![tdd-cycle](tdd-cycle.jpg)
+
 #### Description
 
 To start exercise at first checkout ```tdd-exercise``` branch: ```git checkout tdd-exercise```.
