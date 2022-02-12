@@ -3,9 +3,9 @@ import {EAST, NORTH, SOUTH, WEST} from "../src/directions"
 import {FORWARD, BACKWARD, TURN_RIGHT, TURN_LEFT} from "../src/actions"
 import {SPEED} from "../src/settings"
 
-function getTestCaseDescription(i, t) {
-	return `#${i}: take ${JSON.stringify(t.arrange)} and return ${JSON.stringify(t.expected)}`
-}
+const getTestCaseDescription = (i, t) =>
+	`#${i}: return ${JSON.stringify(t.expected)} when state:${JSON.stringify(t.state)} and action:${JSON.stringify(t.action)}`
+
 
 describe("RoverReduce should", () => {
 
