@@ -9,7 +9,6 @@ const getTestCaseDescription = (i, t) =>
 
 describe("RoverReduce should", () => {
 
-
 	[
 		{
 			state: "some state",
