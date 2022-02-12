@@ -3,6 +3,10 @@ import {EAST, NORTH, SOUTH, WEST} from "../src/directions"
 import {FORWARD, BACKWARD, TURN_RIGHT, TURN_LEFT} from "../src/actions"
 import {SPEED} from "../src/settings"
 
+function getTestCaseDescription(i, t) {
+	return `#${i}: take ${JSON.stringify(t.arrange)} and return ${JSON.stringify(t.expected)}`
+}
+
 describe("RoverReduce should", () => {
 
 
@@ -14,60 +18,72 @@ describe("RoverReduce should", () => {
 
 	const data = [
 		{
-			arrange: {state: {x: 0, y: 0, direction: NORTH}, action: TURN_RIGHT},
-			expected: {state: {x: 0, y: 0, direction: EAST}}
+			state: {x: 0, y: 0, direction: NORTH},
+			action: TURN_RIGHT,
+			expected: {x: 0, y: 0, direction: EAST}
 		},
 		{
-			arrange: {state: {x: 0, y: 0, direction: WEST}, action: TURN_RIGHT},
-			expected: {state: {x: 0, y: 0, direction: NORTH}}
+			state:  {x: 0, y: 0, direction: WEST},
+			action: TURN_RIGHT,
+			expected:  {x: 0, y: 0, direction: NORTH}
 		},
 		{
-			arrange: {state: {x: 0, y: 0, direction: EAST}, action: TURN_LEFT},
-			expected: {state: {x: 0, y: 0, direction: NORTH}}
+			state:  {x: 0, y: 0, direction: EAST},
+			action: TURN_LEFT,
+			expected:  {x: 0, y: 0, direction: NORTH}
 		},
 		{
-			arrange: {state: {x: 0, y: 0, direction: NORTH}, action: TURN_LEFT},
-			expected: {state: {x: 0, y: 0, direction: WEST}}
+			state:  {x: 0, y: 0, direction: NORTH},
+			action: TURN_LEFT,
+			expected:  {x: 0, y: 0, direction: WEST}
 		},
 		{
-			arrange: {state: {x: 0, y: 0, direction: NORTH}, action: FORWARD},
-			expected: {state: {x: 0, y: SPEED, direction: NORTH}}
+			state:  {x: 0, y: 0, direction: NORTH},
+			action: FORWARD,
+			expected:  {x: 0, y: SPEED, direction: NORTH}
 		},
 		{
-			arrange: {state: {x: 0, y: 0, direction: NORTH}, action: BACKWARD},
-			expected: {state: {x: 0, y: -SPEED, direction: NORTH}}
+			state:  {x: 0, y: 0, direction: NORTH},
+			action: BACKWARD,
+			expected:  {x: 0, y: -SPEED, direction: NORTH}
 		},
 		{
-			arrange: {state: {x: 0, y: 0, direction: EAST}, action: FORWARD},
-			expected: {state: {x: SPEED, y:0 , direction: EAST}}
+			state:  {x: 0, y: 0, direction: EAST},
+			action: FORWARD,
+			expected:  {x: SPEED, y: 0, direction: EAST}
 		},
 		{
-			arrange: {state: {x: 0, y: 0, direction: EAST}, action: BACKWARD},
-			expected: {state: {x: -SPEED, y: 0, direction: EAST}}
+			state:  {x: 0, y: 0, direction: EAST},
+			action: BACKWARD,
+			expected:  {x: -SPEED, y: 0, direction: EAST}
 		},
 		{
-			arrange: {state: {x: 0, y: 0, direction: SOUTH}, action: FORWARD},
-			expected: {state: {x: 0, y: -SPEED, direction: SOUTH}}
+			state:  {x: 0, y: 0, direction: SOUTH},
+			action: FORWARD,
+			expected:  {x: 0, y: -SPEED, direction: SOUTH}
 		},
 		{
-			arrange: {state: {x: 0, y: 0, direction: SOUTH}, action: BACKWARD},
-			expected: {state: {x: 0, y: SPEED, direction: SOUTH}}
+			state:  {x: 0, y: 0, direction: SOUTH},
+			action: BACKWARD,
+			expected:  {x: 0, y: SPEED, direction: SOUTH}
 		},
 		{
-			arrange: {state: {x: 0, y: 0, direction: WEST}, action: FORWARD},
-			expected: {state: {x: -SPEED, y:0 , direction: WEST}}
+			state:  {x: 0, y: 0, direction: WEST},
+			action: FORWARD,
+			expected:  {x: -SPEED, y: 0, direction: WEST}
 		},
 		{
-			arrange: {state: {x: 0, y: 0, direction: WEST}, action: BACKWARD},
-			expected: {state: {x: SPEED, y: 0, direction: WEST}}
+			state:  {x: 0, y: 0, direction: WEST},
+			action: BACKWARD,
+			expected:  {x: SPEED, y: 0, direction: WEST}
 		}
 	]
 
 	data.forEach(
-		(tc) =>
-			test(`take ${JSON.stringify(tc.arrange)} and return ${JSON.stringify(tc.expected)}`, () => {
-				const state = RoverReducer(tc.arrange.state, tc.arrange.action)
-				expect(state).toEqual(tc.expected.state)
+		(t, i) =>
+			test(getTestCaseDescription(i, t), () => {
+				const state = RoverReducer(t.state, t.action)
+				expect(state).toEqual(t.expected)
 			}
 			)
 	)
