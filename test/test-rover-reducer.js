@@ -10,82 +10,78 @@ function getTestCaseDescription(i, t) {
 describe("RoverReduce should", () => {
 
 
-	test("do nothing", () => {
-		const initialState = {state: "some state"}
-		const state = RoverReducer(initialState, "unknown action")
-		expect(state).toEqual(initialState)
-	})
-
-	const data = [
+	[
+		{
+			state: "some state",
+			acton: "unknown action",
+			expected: "some state"
+		},
 		{
 			state: {x: 0, y: 0, direction: NORTH},
 			action: TURN_RIGHT,
 			expected: {x: 0, y: 0, direction: EAST}
 		},
 		{
-			state:  {x: 0, y: 0, direction: WEST},
+			state: {x: 0, y: 0, direction: WEST},
 			action: TURN_RIGHT,
-			expected:  {x: 0, y: 0, direction: NORTH}
+			expected: {x: 0, y: 0, direction: NORTH}
 		},
 		{
-			state:  {x: 0, y: 0, direction: EAST},
+			state: {x: 0, y: 0, direction: EAST},
 			action: TURN_LEFT,
-			expected:  {x: 0, y: 0, direction: NORTH}
+			expected: {x: 0, y: 0, direction: NORTH}
 		},
 		{
-			state:  {x: 0, y: 0, direction: NORTH},
+			state: {x: 0, y: 0, direction: NORTH},
 			action: TURN_LEFT,
-			expected:  {x: 0, y: 0, direction: WEST}
+			expected: {x: 0, y: 0, direction: WEST}
 		},
 		{
-			state:  {x: 0, y: 0, direction: NORTH},
+			state: {x: 0, y: 0, direction: NORTH},
 			action: FORWARD,
-			expected:  {x: 0, y: SPEED, direction: NORTH}
+			expected: {x: 0, y: SPEED, direction: NORTH}
 		},
 		{
-			state:  {x: 0, y: 0, direction: NORTH},
+			state: {x: 0, y: 0, direction: NORTH},
 			action: BACKWARD,
-			expected:  {x: 0, y: -SPEED, direction: NORTH}
+			expected: {x: 0, y: -SPEED, direction: NORTH}
 		},
 		{
-			state:  {x: 0, y: 0, direction: EAST},
+			state: {x: 0, y: 0, direction: EAST},
 			action: FORWARD,
-			expected:  {x: SPEED, y: 0, direction: EAST}
+			expected: {x: SPEED, y: 0, direction: EAST}
 		},
 		{
-			state:  {x: 0, y: 0, direction: EAST},
+			state: {x: 0, y: 0, direction: EAST},
 			action: BACKWARD,
-			expected:  {x: -SPEED, y: 0, direction: EAST}
+			expected: {x: -SPEED, y: 0, direction: EAST}
 		},
 		{
-			state:  {x: 0, y: 0, direction: SOUTH},
+			state: {x: 0, y: 0, direction: SOUTH},
 			action: FORWARD,
-			expected:  {x: 0, y: -SPEED, direction: SOUTH}
+			expected: {x: 0, y: -SPEED, direction: SOUTH}
 		},
 		{
-			state:  {x: 0, y: 0, direction: SOUTH},
+			state: {x: 0, y: 0, direction: SOUTH},
 			action: BACKWARD,
-			expected:  {x: 0, y: SPEED, direction: SOUTH}
+			expected: {x: 0, y: SPEED, direction: SOUTH}
 		},
 		{
-			state:  {x: 0, y: 0, direction: WEST},
+			state: {x: 0, y: 0, direction: WEST},
 			action: FORWARD,
-			expected:  {x: -SPEED, y: 0, direction: WEST}
+			expected: {x: -SPEED, y: 0, direction: WEST}
 		},
 		{
-			state:  {x: 0, y: 0, direction: WEST},
+			state: {x: 0, y: 0, direction: WEST},
 			action: BACKWARD,
-			expected:  {x: SPEED, y: 0, direction: WEST}
+			expected: {x: SPEED, y: 0, direction: WEST}
 		}
-	]
-
-	data.forEach(
-		(t, i) =>
-			test(getTestCaseDescription(i, t), () => {
-				const state = RoverReducer(t.state, t.action)
-				expect(state).toEqual(t.expected)
-			}
-			)
+	].map((t, i) =>
+		test(getTestCaseDescription(i, t), () => {
+			const state = RoverReducer(t.state, t.action)
+			expect(state).toEqual(t.expected)
+		}
+		)
 	)
 
 })
