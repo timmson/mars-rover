@@ -7,7 +7,8 @@ function turn(state, clockwise) {
 	if (newDirection < NORTH) newDirection = WEST
 	if (newDirection > WEST) newDirection = NORTH
 	return {
-		...state,
+		x: state.x,
+		y: state.y,
 		direction: newDirection
 	}
 }
@@ -18,9 +19,9 @@ function move(state, speed) {
 
 	const d = (positive === "0" ? speed : -speed)
 	return {
-		...state,
 		x: state.x + (isX ? d : 0),
-		y: state.y + (!isX ? d : 0)
+		y: state.y + (!isX ? d : 0),
+		direction: state.direction
 	}
 }
 
