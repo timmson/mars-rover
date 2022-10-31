@@ -7,8 +7,7 @@ function turn(state, clockwise) {
 	if (newDirection < NORTH) newDirection = WEST
 	if (newDirection > WEST) newDirection = NORTH
 	return {
-		x: state.x,
-		y: state.y,
+		...state,
 		direction: newDirection
 	}
 }

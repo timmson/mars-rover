@@ -1,6 +1,6 @@
 import RoverReducer from "../src/rover-reducer"
 import {EAST, NORTH, SOUTH, WEST} from "../src/directions"
-import {FORWARD, BACKWARD, TURN_RIGHT, TURN_LEFT} from "../src/actions"
+import {BACKWARD, FORWARD, TURN_LEFT, TURN_RIGHT} from "../src/actions"
 import {SPEED} from "../src/settings"
 
 const getTestCaseDescription = (i, t) =>
