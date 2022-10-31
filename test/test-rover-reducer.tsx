@@ -6,7 +6,6 @@ import {SPEED} from "../src/settings"
 const getTestCaseDescription = (i, t) =>
 	`#${i}: return ${JSON.stringify(t.expected)} when state:${JSON.stringify(t.state)} and action:${JSON.stringify(t.action)}`
 
-
 describe("RoverReduce should", () => {
 
 	[
@@ -82,5 +81,4 @@ describe("RoverReduce should", () => {
 		}
 		)
 	)
-
 })
