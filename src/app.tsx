@@ -1,5 +1,4 @@
 import React, {useEffect, useReducer} from "react"
-import PropTypes from "prop-types"
 
 import Rover from "./rover"
 /*import RoverReducer from "./rover-reducer"*/
@@ -7,7 +6,12 @@ const RoverReducer = () => {}
 import {EAST} from "./directions"
 import {MARS_HEIGHT, MARS_HEIGHT_SHIFT, ROVER_HEIGHT, ROVER_WIDTH} from "./settings"
 
-export default function App(props) {
+type AppProps = {
+	window: any,
+	document: any
+}
+
+export default function App(props: AppProps) {
 
 	const window = props.window
 	const document = props.document
@@ -40,7 +44,7 @@ export default function App(props) {
 			</nav>
 			<Rover position={state} shift={shift}/>
 			<div className="container mars" style={{background: "url(img/bg.png)"}}>
-				<div className="row" style={{height: `${MARS_HEIGHT/2}px`}}>
+				<div className="row" style={{height: `${MARS_HEIGHT / 2}px`}}>
 					<div className="col-6 border border-1 border-dark text-start align-text-bottom">
 
 					</div>
@@ -48,7 +52,7 @@ export default function App(props) {
 
 					</div>
 				</div>
-				<div className="row" style={{height: `${MARS_HEIGHT/2}px`}}>
+				<div className="row" style={{height: `${MARS_HEIGHT / 2}px`}}>
 					<div className="col-6 border border-1 border-dark text-end align-text-bottom">
 
 					</div>
@@ -59,10 +63,5 @@ export default function App(props) {
 			</div>
 		</>
 	)
-}
-
-App.propTypes = {
-	window: PropTypes.object.isRequired,
-	document: PropTypes.object.isRequired
 }
 
