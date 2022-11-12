@@ -1,12 +1,6 @@
 # Mars Rover Kata for TDD
 Mars Rover Kata for TDD
 
-- React 17
-- Bootstrap 5
-- ESLint, Jest
-- Webpack
-- SASS/SCSS support
-
 ### Setup
 ```sh
 git clone https://github.com/timmson/mars-rover.git
@@ -21,7 +15,7 @@ npm i
 
 #### TDD Cycle
 
-![tdd-cycle](tdd-cycle.jpg)
+![tdd-cycle](tdd-cycle.png)
 
 #### Description
 
