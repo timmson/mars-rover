@@ -14,12 +14,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/timmson/react-bootstrap-template.git"
+    "url": "git://github.com/timmson/mars-rover.git"
   },
   "author": "timmnson",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/timmson/react-bootstrap-template/issues"
+    "url": "https://github.com/timmson/mars-rover/issues"
   },
   "dependencies": {
     "bootstrap": "^5.2.2",

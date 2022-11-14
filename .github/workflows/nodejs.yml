@@ -28,8 +28,8 @@ jobs:
 
     - name: Commit files
       run: |
-        git config --local user.email "react-bootstrap-template[bot]@users.noreply.github.com"
-        git config --local user.name "react-bootstrap-template[bot]"
+        git config --local user.email "mars-rover[bot]@users.noreply.github.com"
+        git config --local user.name "mars-rover[bot]"
         git add -A
         git diff-index --quiet HEAD || git commit -m "Compile App"
 
