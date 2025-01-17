@@ -1,8 +1,9 @@
 import {BACKWARD, FORWARD, TURN_LEFT, TURN_RIGHT} from "./actions"
 import {NORTH, WEST} from "./directions"
 import {SPEED} from "./settings"
+import {State} from "./state"
 
-function turn(state, clockwise) {
+function turn(state: State, clockwise: number) {
 	let newDirection = state.direction + clockwise
 	if (newDirection < NORTH) newDirection = WEST
 	if (newDirection > WEST) newDirection = NORTH
@@ -12,7 +13,7 @@ function turn(state, clockwise) {
 	}
 }
 
-function move(state, speed) {
+function move(state: State, speed: number) {
 	const [positive, leftOrRight] = (state.direction >>> 0).toString(2).padStart(2, "0").split("")
 	const isX = (leftOrRight === "1")
 
@@ -24,7 +25,7 @@ function move(state, speed) {
 	}
 }
 
-export default function RoverReducer(state, action) {
+export default function RoverReducer(state: State, action: string) {
 
 	switch (action) {
 	case TURN_RIGHT:

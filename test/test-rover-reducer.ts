@@ -7,13 +7,7 @@ const getTestCaseDescription = (i, t) =>
 	`#${i}: return ${JSON.stringify(t.expected)} when state:${JSON.stringify(t.state)} and action:${JSON.stringify(t.action)}`
 
 describe("RoverReduce should", () => {
-
 	[
-		{
-			state: "some state",
-			acton: "unknown action",
-			expected: "some state"
-		},
 		{
 			state: {x: 0, y: 0, direction: NORTH},
 			action: TURN_RIGHT,

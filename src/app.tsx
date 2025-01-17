@@ -6,8 +6,8 @@ import {EAST} from "./directions"
 import {MARS_HEIGHT, MARS_HEIGHT_SHIFT, ROVER_HEIGHT, ROVER_WIDTH} from "./settings"
 
 type AppProps = {
-	window: any,
-	document: any
+	window: Window,
+	document: Document
 }
 
 export default function App(props: AppProps) {
@@ -24,7 +24,7 @@ export default function App(props: AppProps) {
 	const [state, dispatch] = useReducer(RoverReducer, initState, () => initState)
 
 	useEffect(() => {
-		const keyHandler = (event) => dispatch(event.key)
+		const keyHandler = (event: KeyboardEvent) => dispatch(event.key)
 		window.addEventListener("keypress", keyHandler)
 		return () => window.removeEventListener("keypress", keyHandler)
 	}, [window])

@@ -1,12 +1,9 @@
 import React from "react"
 import {EAST} from "./directions"
+import {State} from "./state"
 
 type RoverProps = {
-	position: {
-		x: number,
-		y: number,
-		direction: number
-	}
+	position: State,
 	shift: {
 		x: number,
 		y: number,
