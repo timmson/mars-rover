@@ -53,4 +53,4 @@ To test your application in browser, use your real RoverReducer in ```src/app.js
 
 At the end you could write like this [..::Live demo::..](https://timmson.github.io/mars-rover/).
 
-Our solution is placed in branch [solution](tree/solution).
+Our solution is placed in branch [solution](../solution).
