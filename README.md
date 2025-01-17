@@ -19,7 +19,7 @@ npm i
 
 #### Description
 
-To start exercise at first checkout ```tdd-exercise``` branch: ```git checkout tdd-exercise```.
+To start exercise at first checkout ```master``` branch: ```git checkout master```.
 
 Your goal is to create ```RoverReducer``` in ```src/rover-reducer``` like that:
 ````js
@@ -43,12 +43,14 @@ export default function RoverReducer(oldState, action) {
 You should start to write your tests in ```test/test-rover-reducer``` with TDD:
 
 1. When action is TURN_RIGHT then rover should change direction clockwise
-1. When action is TURN_LEFT then rover should change direction counterclockwise
-1. Think about refactoring ;)
-1. When action is FORWARD then rover should move to current direction with SPEED
-1. When action is BACKWARD then rover should move back from current direction with SPEED
-1. Think about refactoring;)
+2. When action is TURN_LEFT then rover should change direction counterclockwise
+3. Think about refactoring ;)
+4. When action is FORWARD then rover should move to current direction with SPEED
+5. When action is BACKWARD then rover should move back from current direction with SPEED
+6. Think about refactoring;)
 
 To test your application in browser, use your real RoverReducer in ```src/app.js:6``` and run ```npm start```.
 
 At the end you could write like this [..::Live demo::..](https://timmson.github.io/mars-rover/).
+
+Our solution is placed in branch [solution](tree/solution).
