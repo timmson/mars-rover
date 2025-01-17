@@ -34,7 +34,7 @@ Your goal is to create ```RoverReducer``` in ```src/rover-reducer``` like that:
  * @returns newState with the same structure as oldState
  * @constructor
  */
-export default function RoverReducer(oldState, action) {
+export default function RoverReducer(state: State, action: string) {
      //...
      return newState
 }
